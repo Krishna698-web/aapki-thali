@@ -1,0 +1,18 @@
+.summary{
+    text-align: center;
+    background: #272C2F;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(-25%);
+    box-shadow: 0 2px 1rem -2px black;
+}
+
+.summary p{
+    margin: 1rem;
+}
+
+
+/* #e75874, #be1558, #fbcbc9 and */

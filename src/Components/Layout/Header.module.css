@@ -1,0 +1,23 @@
+.header{
+
+}
+/* #e75874, #be1558, #fbcbc9 and */
+h1{
+    color:#322514;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 1rem;
+    position: fixed;
+    background: white;
+    width: 100%;
+    box-shadow: 0 2px 1rem -2px black;
+}
+
+
+img{
+    width: 100%;
+    /* clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 100%); */
+    
+}

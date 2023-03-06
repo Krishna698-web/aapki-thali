@@ -1,0 +1,44 @@
+.list{
+    padding: 1rem;
+    box-shadow: 2px 2px 10px -2px black;
+    border-radius: 5px;
+    width: 90%;
+    margin: -2rem auto;
+
+}
+
+.list li{
+    list-style: none;
+    border-bottom: 2px solid #FC6957;
+    margin: 1rem 0;
+    padding: 0 0 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list li p{
+    font-size: 12px;
+    color: lightslategray;
+    font-weight: 100;
+}
+
+.list form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.list form button{
+    background: #FC6957;
+    border: none;
+    padding: 8px 1rem;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.list form input{
+    width: 1.8rem;
+}
