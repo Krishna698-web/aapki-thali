@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import CartContext from '../../store/cart-context'
 import Button from '../UI/Button'
 import Modal from '../UI/Modal'
@@ -6,7 +6,7 @@ import CartItem from './CartItem'
 import classes from './Cart.module.css';
 
 const Cart = (props) => {
-
+    const [orderPlaced, setOrderPlaced] = useState(false);
     const cartCtx = useContext(CartContext);
 
     const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
@@ -36,17 +36,25 @@ const Cart = (props) => {
         </ul>
     )
 
+    const orderPlacedHandler = () => {
+        setOrderPlaced(true);
+    }
+
     return (
         <Modal onClose={props.onClose}>
             {cartItems}
-            <div>
-                <span>Total Amount</span>
-                <span>{totalAmount}</span>
+            <div className={classes.cartSection}>
+                <div className={classes.total}>
+                    <h3>Total Amount</h3>
+                    <span className={classes.totalBill}>{totalAmount}</span>
+                </div>
+                <div className={classes.cartButtons}>
+                    <Button onClick={props.onClose}>Close</Button>
+                    {hasItems && <Button onClick={orderPlacedHandler}>Order</Button>}
+                </div>
             </div>
-            <div>
-                <Button onClick={props.onClose}>Close</Button>
-                {hasItems && <Button>Order</Button>}
-            </div>
+            {orderPlaced && <p className={classes.msg}>Thank you for ordering, enjoy your meal😋😋. <br />
+                Have a good day..</p>}
         </Modal>
     )
 }

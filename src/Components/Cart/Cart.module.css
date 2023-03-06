@@ -16,6 +16,7 @@
     border: 1px solid gray;
     padding: 0 5px;
     border-radius: 3px;
+    font-size: 15px;
     margin-left: 1rem;
 }
 
@@ -27,4 +28,50 @@
     border: 1px solid #414141;
     border-radius: 3px;
     font-size: 1.2rem;
+}
+
+
+.cartSection{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total{
+    font-size: 1rem;
+}
+
+.totalBill{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkred;
+}
+
+.cartButtons button{
+    padding: 8px 1rem;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 2px solid maroon;
+    color: white;
+    font-weight: bold;
+}
+
+.cartButtons button:nth-child(1){
+    color: maroon;
+    background: transparent;
+}
+.cartButtons button:nth-child(2){
+    background: maroon;
+}
+.msg{
+    /* position: absolute;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px -2px black;
+    width: 100%; */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: maroon;
 }
