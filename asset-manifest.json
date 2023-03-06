@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/aapki-thali/static/css/main.b19bdc4f.css",
+    "main.js": "/aapki-thali/static/js/main.0da55c4a.js",
+    "static/media/white.jpg": "/aapki-thali/static/media/white.fc1c252ee9bbfb993bbd.jpg",
+    "index.html": "/aapki-thali/index.html",
+    "main.b19bdc4f.css.map": "/aapki-thali/static/css/main.b19bdc4f.css.map",
+    "main.0da55c4a.js.map": "/aapki-thali/static/js/main.0da55c4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b19bdc4f.css",
+    "static/js/main.0da55c4a.js"
+  ]
+}
