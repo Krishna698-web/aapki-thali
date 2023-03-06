@@ -12,12 +12,18 @@ header{
     position: fixed;
     background: white;
     width: 100%;
+    z-index: 5;
     box-shadow: 0 2px 1rem -2px black;
 }
 
 
 img{
     width: 100%;
-    /* clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 0% 100%); */
-    
+    clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 80%, 0% 100%);
+}
+
+@media (min-width: 768px) {
+    img{
+        clip-path: polygon(0% 0%, 0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    }   
 }
