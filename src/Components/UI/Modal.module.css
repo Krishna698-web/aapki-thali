@@ -15,7 +15,11 @@
     width: 85%;
 }
 
-
+@media (min-width: 768px) {
+ .overlay{
+    width: 50%;
+ }   
+}
 /* #FC6957
 #FCBC12
 #E6E7EB */
