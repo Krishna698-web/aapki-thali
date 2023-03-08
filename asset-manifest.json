@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/aapki-thali/static/css/main.b19bdc4f.css",
-    "main.js": "/aapki-thali/static/js/main.0da55c4a.js",
+    "main.css": "/aapki-thali/static/css/main.d61b29fd.css",
+    "main.js": "/aapki-thali/static/js/main.45c679b0.js",
     "static/media/white.jpg": "/aapki-thali/static/media/white.fc1c252ee9bbfb993bbd.jpg",
     "index.html": "/aapki-thali/index.html",
-    "main.b19bdc4f.css.map": "/aapki-thali/static/css/main.b19bdc4f.css.map",
-    "main.0da55c4a.js.map": "/aapki-thali/static/js/main.0da55c4a.js.map"
+    "main.d61b29fd.css.map": "/aapki-thali/static/css/main.d61b29fd.css.map",
+    "main.45c679b0.js.map": "/aapki-thali/static/js/main.45c679b0.js.map"
   },
   "entrypoints": [
-    "static/css/main.b19bdc4f.css",
-    "static/js/main.0da55c4a.js"
+    "static/css/main.d61b29fd.css",
+    "static/js/main.45c679b0.js"
   ]
 }
