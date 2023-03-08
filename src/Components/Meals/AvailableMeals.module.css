@@ -8,7 +8,7 @@
 
 .list li{
     list-style: none;
-    border-bottom: 2px solid #FC6957;
+    border-bottom: 2px solid maroon;
     margin: 1rem 0;
     padding: 0 0 8px 0;
     display: flex;
@@ -19,6 +19,7 @@
     font-size: 12px;
     color: lightslategray;
     font-weight: 100;
+    font-style: italic;
 }
 
 .list li span{
@@ -35,7 +36,8 @@
 }
 
 .list form button{
-    background: #FC6957;
+    background: maroon;
+    color: white;
     border: none;
     padding: 8px 1rem;
     margin-top: 10px;
