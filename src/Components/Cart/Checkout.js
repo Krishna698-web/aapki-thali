@@ -5,7 +5,7 @@ const isEmpty = (value) => value !== "";
 const isSixChars = (value) => value.length === 6;
 const isMobileNumber = (value) => value.length === 10;
 
-const Checkout = ({ onCancel }) => {
+const Checkout = ({ onCancel, onCartSubmit }) => {
   const [formValidity, setFormValidity] = useState({
     name: true,
     address: true,
@@ -42,6 +42,13 @@ const Checkout = ({ onCancel }) => {
     if (!formIsValid) {
       return;
     }
+
+    onCartSubmit({
+      name: nameValue,
+      address: addressValue,
+      pincode: pincodeValue,
+      mobile: mobileValue,
+    });
   };
 
   return (

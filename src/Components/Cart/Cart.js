@@ -5,12 +5,14 @@ import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
 import Checkout from "./Checkout";
+import useHttp from "../hooks/use-http";
 
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
   const [checkout, setCheckout] = useState(false);
 
+  const { sendRequest } = useHttp();
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
 
@@ -41,6 +43,19 @@ const Cart = (props) => {
   const checkoutHandler = () => {
     setCheckout(true);
   };
+
+  const submitCartHandler = async (userData) => {
+    console.log(userData);
+    sendRequest({
+      url: "https://aapkithali-df247-default-rtdb.firebaseio.com/orders.json",
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: { user: userData, orderedItems: cartCtx.items },
+    });
+
+    // console.log(await response);
+  };
+
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
@@ -49,7 +64,9 @@ const Cart = (props) => {
           <h3>Total Amount</h3>
           <span className={classes.totalBill}>{totalAmount}</span>
         </div>
-        {checkout && <Checkout onCancel={props.onClose} />}
+        {checkout && (
+          <Checkout onCancel={props.onClose} onCartSubmit={submitCartHandler} />
+        )}
         {!checkout && (
           <div className={classes.cartButtons}>
             <Button onClick={props.onClose}>Close</Button>
