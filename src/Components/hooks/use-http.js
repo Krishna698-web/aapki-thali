@@ -3,7 +3,7 @@ import { useState } from "react";
 const useHttp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
-  async function sendRequest(requestConfig, retriveData) {
+  async function sendRequest(requestConfig, retriveData = "") {
     try {
       setIsLoading(true);
       const response = await fetch(requestConfig.url, {

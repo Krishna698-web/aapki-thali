@@ -11,6 +11,7 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
   const [checkout, setCheckout] = useState(false);
+  const [isSubmited, setIsSubmited] = useState(false);
 
   const { sendRequest } = useHttp();
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
@@ -52,12 +53,13 @@ const Cart = (props) => {
       headers: { "Content-type": "application/json" },
       body: { user: userData, orderedItems: cartCtx.items },
     });
-
+    setIsSubmited(true);
+    cartCtx.clearCartHandler();
     // console.log(await response);
   };
 
-  return (
-    <Modal onClose={props.onClose}>
+  const cartModal = (
+    <>
       {cartItems}
       <div className={classes.cartSection}>
         <div className={classes.total}>
@@ -74,6 +76,21 @@ const Cart = (props) => {
           </div>
         )}
       </div>
+    </>
+  );
+
+  return (
+    <Modal onClose={props.onClose}>
+      {!isSubmited ? (
+        cartModal
+      ) : (
+        <>
+          <p>Form Submited...</p>
+          <button onClick={props.onClose} className={classes.closeOnSubmit}>
+            Close
+          </button>
+        </>
+      )}
     </Modal>
   );
 };
