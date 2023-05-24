@@ -8,7 +8,7 @@ const Meals = () => {
   return (
     <section className={classes.meals}>
       <MealsSummary />
-      <AddNewMeals />
+      {/* <AddNewMeals /> */}
       <AvailableMeals />
     </section>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../UI/Modal";
 import styles from "./AddNewMeals.module.css";
-import useMealsInput from "../hooks/use-mealsInput";
+import useMealsInput from "../hooks/use-Input";
 import Button from "../UI/Button";
 import useHttp from "../hooks/use-http";
 
@@ -47,6 +47,7 @@ const NewMealsForm = ({ onShowForm }) => {
       name: mealName,
       price: mealPrice,
       description: mealDescription,
+      id: Math.random(),
     };
 
     // console.log(aboutMeal);
@@ -60,7 +61,7 @@ const NewMealsForm = ({ onShowForm }) => {
         },
       });
 
-      // console.log(data);
+      console.log(data);
       onShowForm(false);
     } catch (error) {
       console.log(error.message);

@@ -1,0 +1,9 @@
+.error {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+}

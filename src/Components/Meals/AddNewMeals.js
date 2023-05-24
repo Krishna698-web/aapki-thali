@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import Button from "../UI/Button";
 import userEvent from "@testing-library/user-event";
 import Modal from "../UI/Modal";
-import useMealsInput from "../hooks/use-mealsInput";
+import useMealsInput from "../hooks/use-Input";
 import NewMealsForm from "./NewMealsForm";
 
 const AddNewMeals = () => {

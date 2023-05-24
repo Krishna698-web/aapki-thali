@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useMealsInput = (validate) => {
+const useInput = (validate) => {
   const [mealInput, setMealInput] = useState("");
   const [isTouched, setIsTouched] = useState(false);
 
@@ -30,4 +30,4 @@ const useMealsInput = (validate) => {
   };
 };
 
-export default useMealsInput;
+export default useInput;

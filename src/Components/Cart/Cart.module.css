@@ -1,78 +1,80 @@
-.cartItems li{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    padding: 0 0 1rem 0;
-    border-bottom: 2px solid maroon;
+.cartItems li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 0 1rem 0;
+  border-bottom: 2px solid maroon;
 }
 
-.price{
-    color: maroon;
-    font-weight: bold;
-    font-size: 1.3rem;
+.price {
+  color: maroon;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-.amount{
-    border: 1px solid gray;
-    padding: 0 5px;
-    border-radius: 3px;
-    font-size: 15px;
-    margin-left: 1rem;
+.amount {
+  border: 1px solid gray;
+  padding: 0 5px;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-left: 1rem;
 }
 
-.buttons button{
-    width: 2rem;
-    height: 1.5rem;
-    margin: 3px 5px;
-    background: white;
-    border: 1px solid #414141;
-    border-radius: 3px;
-    font-size: 1.2rem;
-    cursor: pointer;
+.buttons button {
+  width: 2rem;
+  height: 1.5rem;
+  margin: 3px 5px;
+  background: white;
+  border: 1px solid #414141;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-
-.cartSection{
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.cartSection {
+  margin: 1rem 0;
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
 }
 
-.total{
-    font-size: 1rem;
+.total {
+  font-size: 1rem;
 }
 
-.totalBill{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: darkred;
+.totalBill {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: darkred;
 }
 
-.cartButtons button{
-    padding: 8px 1rem;
-    margin: 0 5px;
-    border-radius: 5px;
-    border: 2px solid maroon;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+.cartButtons {
+  /* position: relative; */
+  float: right;
+}
+.cartButtons button {
+  padding: 8px 1rem;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 2px solid maroon;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.cartButtons button:nth-child(1){
-    color: maroon;
-    background: transparent;
+.cartButtons button:nth-child(1) {
+  color: maroon;
+  background: transparent;
 }
-.cartButtons button:nth-child(2){
-    background: maroon;
+.cartButtons button:nth-child(2) {
+  background: maroon;
 }
-.msg{
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    background-color: maroon;
-    padding: 12px;
-    border-radius: 5px;
+.msg {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  background-color: maroon;
+  padding: 12px;
+  border-radius: 5px;
 }
-
