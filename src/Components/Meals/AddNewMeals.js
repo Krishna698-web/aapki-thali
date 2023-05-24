@@ -12,7 +12,7 @@ const AddNewMeals = () => {
     <div>
       <h1>Add New Meals...</h1>
       <Button onClick={() => setShowForm(true)}>Add</Button>
-      {showForm && <NewMealsForm />}
+      {showForm && <NewMealsForm onShowForm={setShowForm} />}
     </div>
   );
 };

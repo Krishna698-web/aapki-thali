@@ -3,8 +3,10 @@ import Modal from "../UI/Modal";
 import styles from "./AddNewMeals.module.css";
 import useMealsInput from "../hooks/use-mealsInput";
 import Button from "../UI/Button";
+import useHttp from "../hooks/use-http";
 
-const NewMealsForm = () => {
+const NewMealsForm = ({ onShowForm }) => {
+  const { sendRequest } = useHttp();
   const {
     value: mealName,
     isValid: mealNameIsValid,
@@ -38,7 +40,7 @@ const NewMealsForm = () => {
     formIsValid = true;
   }
 
-  async function addNewMealsHandler(e) {
+  function addNewMealsHandler(e) {
     e.preventDefault();
 
     const aboutMeal = {
@@ -49,19 +51,17 @@ const NewMealsForm = () => {
 
     // console.log(aboutMeal);
     try {
-      const response = await fetch(
-        "https://aapkithali-df247-default-rtdb.firebaseio.com/meals.json",
-        {
-          method: "POST",
-          body: JSON.stringify(aboutMeal),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const data = sendRequest({
+        url: "https://aapkithali-df247-default-rtdb.firebaseio.com/meals.json",
+        method: "POST",
+        body: aboutMeal,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
-      const data = await response.json();
-      console.log(data);
+      // console.log(data);
+      onShowForm(false);
     } catch (error) {
       console.log(error.message);
       throw new Error();
@@ -73,7 +73,7 @@ const NewMealsForm = () => {
   }
 
   return (
-    <Modal>
+    <Modal onClose={() => onShowForm(false)}>
       <form onSubmit={addNewMealsHandler}>
         <h2>Add your Meal</h2>
         <div className="field">
