@@ -53,28 +53,28 @@ const Checkout = ({ onCancel, onCartSubmit }) => {
 
   return (
     <form onSubmit={submitCheckoutFormHandler}>
-      <div className="field">
+      <div className={styles.field}>
         <label htmlFor="name">Name</label>
         <input type="text" ref={nameRef} id="name" />
         {!formValidity.name && (
           <p className={styles.error}>Please enter name.</p>
         )}
       </div>
-      <div className="field">
+      <div className={styles.field}>
         <label htmlFor="address">Address</label>
         <input type="text" ref={addressRef} id="address" />
         {!formValidity.address && (
           <p className={styles.error}>Please enter address.</p>
         )}
       </div>
-      <div className="field">
+      <div className={styles.field}>
         <label htmlFor="pin">Pincode</label>
         <input type="text" ref={pincodeRef} id="name" />
         {!formValidity.pincode && (
           <p className={styles.error}>Please enter valid pincode.</p>
         )}
       </div>
-      <div className="field">
+      <div className={styles.field}>
         <label htmlFor="mobile">Mobile</label>
         <input type="tel" ref={mobileRef} id="mobile" />
         {!formValidity.mobile && (
